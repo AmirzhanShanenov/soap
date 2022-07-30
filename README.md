@@ -15,7 +15,6 @@ import (
 func main() {
 	env := &soap.Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    "http://www.example.pl/ws/test/universal",
 		Header: &soap.Header{
 			WsseSecurity: &soap.WsseSecurity{
 				MustUnderstand: "1",
@@ -48,7 +47,7 @@ func main() {
 Output:
 
 ```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:univ="http://www.example.pl/ws/test/universal">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
    <soapenv:Header>
       <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
          <wsse:UsernameToken wsu:Id="UsernameToken-1">

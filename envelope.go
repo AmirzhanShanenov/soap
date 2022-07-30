@@ -7,7 +7,6 @@ import (
 type Envelope struct {
 	XMLName      xml.Name `xml:"soapenv:Envelope"`
 	XmlnsSoapenv string   `xml:"xmlns:soapenv,attr"`
-	XmlnsUniv    string   `xml:"xmlns:univ,attr"`
 	XmlnsPojo   string	`xml:"xmlns:pojo,attr"`
 	
 	Header *Header

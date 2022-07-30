@@ -8,12 +8,10 @@ import (
 
 const prefix string = ""
 const indent string = "   "
-const namespaceUniv = "http://www.example.pl/ws/test/universal"
 
 func ExampleBody() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 	}
 
 	env.Body = &Body{}
@@ -49,7 +47,6 @@ func ExampleEnvelope() {
 func ExampleHeader() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header:       &Header{},
 	}
 
@@ -68,7 +65,6 @@ func ExampleHeader() {
 func ExampleWsseSecurity() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
@@ -96,7 +92,6 @@ func ExampleWsseSecurity() {
 func ExampleUsernameToken() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
@@ -129,7 +124,6 @@ func ExampleUsernameToken() {
 func ExampleUsername() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
@@ -167,7 +161,6 @@ func ExampleUsername() {
 func ExamplePassword() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
@@ -207,7 +200,6 @@ func ExamplePassword() {
 func ExampleNonce() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
@@ -255,7 +247,6 @@ func ExampleNonce() {
 func ExampleCreated() {
 	env := &Envelope{
 		XmlnsSoapenv: "http://schemas.xmlsoap.org/soap/envelope/",
-		XmlnsUniv:    namespaceUniv,
 		Header: &Header{
 			WsseSecurity: &WsseSecurity{
 				MustUnderstand: "1",
